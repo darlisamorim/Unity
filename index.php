@@ -27,30 +27,33 @@
 						<mark>Unity</mark> Form <b>PHPMailer</b>
 					</legend>
 
-					<!-- required -->
+					<!-- 
+						required
+					-->
+
 					<label for="name">
 						<span>Nome:</span>
-						<input type="text" name="name" placeholder="Digite seu nome!" >
+						<input type="text" name="name" placeholder="Digite seu nome!" required>
 					</label>
 
 					<label for="email">
 						<span>E-mail:</span>
-						<input type="email" name="email" placeholder="Digite seu e-mail!" >
+						<input type="email" name="email" placeholder="Digite seu e-mail!">
 					</label>
 
 					<label for="file">
 						<span>Anexe:</span>
-						<input type="file" accept="image/png, image/jpeg, image/jpg" name="attachment" >
+						<input type="file" accept="image/png, image/jpeg, image/jpg" name="attachment">
 					</label>
 
 					<label for="subject">
 						<span>Assunto:</span>
-						<input type="text" name="subject" placeholder="Sobre o que deseja falar?" >
+						<input type="text" name="subject" placeholder="Sobre o que deseja falar?">
 					</label>
 
 					<label for="message">
 						<span>Mensagem:</span>
-						<textarea name="message" rows="4" cols="50" placeholder="Digite sua mensagem!" ></textarea>
+						<textarea name="message" rows="4" cols="50" placeholder="Digite sua mensagem!"></textarea>
 					</label>
 
 					<label for="buttons">

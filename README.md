@@ -98,19 +98,32 @@ define('MAIL_TESTER', ''); // E-mail de disparo teste
 
 define('MAIL_REDIRECT', 'URL_DE_REDIRECIONAMENTO'); // URL de redirecionamento ex: ( https://www.darlisalvesamorim.com )
 
-Perceba que todas as minhas credenciais estão dentro da segunda camada de aspas simples ex: ( 'MAIL_HOST' 'CREDENCIAIS' ) estou marcando assim, pois é onde serão servidas as informações
+* Perceba que todas as minhas credenciais estão dentro da segunda camada de aspas simples ex: ( 'MAIL_HOST' 'CREDENCIAIS' ) estou marcando assim, pois é onde serão servidas as informações.
 
 * Note que este arquivo define as configuração do PHPMailer e cada linha contém um comentário. Além disso vou deixar pré-configurado com minhas credenciais ( Excluindo é claro minha senha de e-mail ), certo agora você só precisa substituir as minhas credenciais pelas suas.
 ```
 
 Dentro da pasta **raiz/**, temos um arquivo **index.php** afim de simular um formulário criei e formatei alguns campos ( Nome, E-mail, Anexo, Assunto e Mensagem ), porém você poderá adiciona-los ou remove-los seguindo os passos abaixo:
 ```
-* Exemplo:
+* No nosso exemplo vamos adicionar um campo novo chamado ( SOBRENOME ). Dentro do arquivo **index.php** vamos localizar o <label for="name> e vamos copiar e colar ele assim como todo o conteúdo que o compoe. O código deverá ficar assim:
 
-<meta itemprop="name" content="ProGame | O Melhor Site de Games" />
-<meta itemprop="description" content="Você encontra o download de todos os melhores jogos de graça" />
-<meta itemprop="url" content="https://www.progame.com/" />
-<meta itemprop="image" content="https://www.progame.com/_storage/images/default.svg" />
+  <label for="name">
+    <span>Nome:</span>
+    <input type="text" name="name" placeholder="Digite seu nome!" required>
+  </label>
+  
+  <label for="name">
+    <span>Nome:</span>
+    <input type="text" name="name" placeholder="Digite seu nome!" required>
+  </label>
+
+* Agora que você já colou o <label for="name> basta substituir os valores e deixar o seu como no exemplo abaixo:
+
+  <label for="sobrenome">
+    <span>Sobrenome:</span>
+    <input type="text" name="sobrenome" placeholder="Digite seu Sobrenome!" required>
+  </label>
+
 ```
 Desde de que você tenha atenção irá conseguir modificar e ajustar os arquivos para alimenta-los a partir do refatoramento e assim terá um site ou página otimizado.
 
