@@ -1,7 +1,7 @@
-<h1 align='center'> Origins 👋, Basic project for front-end  🧑🏻‍💻 </h1>
+<h1 align='center'> Unity 👋, Contact Form 🧑🏻‍💻 </h1>
 
 <p align='center'>
-  Hope you like this foundation.
+  Contact form with PHPMailer without using Composer.
 </p>
 
 <p align='center'>
@@ -16,7 +16,7 @@
 
 ## ➤ Projeto
 
-Origins é uma base de arquivos para inicializar o desenvolvimento front-end, reúne algumas bibliotecas nativas veja nos extras abaixo. A proposta aqui é somente fazer o download e começar a codar. Deixei uma estrutura simples pré-pronto( Header, Main, Footer, CSS e Medias Queries), porém é claro que você precisa ler está documentação até o final e trabalhar em cima da estrutura não do que deixei pré-pronto.
+Unity é um respositório que tem o objetivo de criar um formulário de disparo de e-mails com anexo usando o PHPMailer sem utilizar o composer. Algumas vezes eu já tive a necessidade de criar formulários ou fazer disparos de e-mails autenticados mais as vezes você simplesmente não quer instalar ou usar o composer e agora você não precisa mais!
 
 
 
@@ -28,9 +28,9 @@ Origins é uma base de arquivos para inicializar o desenvolvimento front-end, re
   - Estrutura separada com tags pré-servidas
 - [CSS3](https://www.w3.org/Style/CSS/Overview.en.html)
   - Folhas de estilo separadas
-- [jQuery](https://jquery.com/)
+- ~~[jQuery](https://jquery.com/) Pending~~
   - Biblioteca adicionada
-- [Javascript](https://javascript.info/)
+- ~~[Javascript](https://javascript.info/) Pending~~
   - Arquivo incluido( main.js )
 - [PHP](https://www.php.net/)
   - Includes para fatiar o layout
@@ -47,8 +47,8 @@ Extras:
     * [AnimateCSS](https://animate.style)
 
 
-  * Software
-    * [Atom](https://atom.io/)
+  * Visual Studio Code
+    * [VS Code](https://code.visualstudio.com/)
 
 
 
