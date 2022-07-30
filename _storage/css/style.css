@@ -1,0 +1,168 @@
+/* All Variables */
+:root {
+
+	/* Color Base Default */
+	--black: hsl(0, 0%, 0%);
+	--black-hsla: hsla(0, 0%, 0%, .7); /* Black Transparent */
+	--white: hsl(0, 0%, 100%);
+	--white-hsla: hsla(0, 0%, 100%, .7); /* White Transparent */
+	--gray: hsl(0, 0%, 16%);
+	--gray-hsla: hsla(0, 0%, 16%, .1);
+	--gray-var: hsl(0, 0%, 95%);
+
+	/* Color Main */
+	--color-first-hue: 350;
+	--color-first-hsla: 1;
+	--color-first: hsla(var(--color-first-hue), 71%, 41%, var(--color-first-hsla));
+
+	/* Second Main */
+	--color-second-hue: 350;
+	--color-second-hsla: 1;
+	--color-second: hsla(var(--color-second-hue), 71%, 28%, var(--color-second-hsla));
+
+	/* Start */
+	--fz: 0em !important;
+	--mz: 0;
+	--pz: 0;
+	--dn: none;
+	--font-name: 'Open Sans', sans-serif;
+
+	/* Convert Size -> ( px ) to ( em ) {N / 16} = Result */
+	--font-mini: .7em;	/* 8.4px */
+	--font-normal: .825em;	/* 8.4px */
+	--font-smaller: 1em;	/* 16px */
+	--font-big: 1.75em;		/* 28px */
+
+
+	/* Contents */
+	--container-with: 100%;
+	--content-max-width: 1024px;
+	/* --content-max-width: 1366px; */
+	--content-width: 90%;
+
+}
+
+
+/* Settings HTML */
+html {
+	scroll-behavior: smooth;
+}
+
+/* Settings BODY */
+body {
+	font-family: var(--font-name);
+	background-color: var(--gray-var);
+}
+
+/* Container's Block */
+.container {
+	width: var(--container-with);
+	display: block;
+}
+.content {
+	width: var(--content-width);
+	max-width: var(--content-max-width);
+	display: block;
+	margin: 0 auto;
+}
+
+/* Container's Flex */
+.container__flex {
+	width: var(--container-with);
+	display: flex;
+	flex-wrap: wrap;
+}
+.content__flex {
+	width: var(--content-width);
+	max-width: var(--content-max-width);
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0 auto;
+}
+
+/* Main */
+.main {
+	height: 100vh;
+	align-content: center;
+	justify-content: center;
+}
+
+.main .form {}
+.main .form fieldset {
+	border: 2px solid var(--color-second);
+	padding: 20px;
+	display: flex;
+	flex-direction: column;
+}
+.main .form legend {
+	position: relative;
+	bottom: 2px;
+	font-size: var(--font-big);
+	padding: 0 20px;
+}
+.main .form legend mark {
+	background-color: Transparent;
+	font-weight: bold;
+}
+.main .form legend b {
+	color: var(--color-second);
+}
+.main .form label {
+	background-color: var(--white);
+	display: flex;
+	flex-wrap: wrap;
+	margin-bottom: 12px;
+	padding: 12px;
+	border: 1px solid var(--gray-hsla)
+}
+.main .form label span,
+.main .form label input,
+.main .form label textarea {
+	font-size: var(--font-normal);
+	flex-basis: 100%;
+	text-transform: uppercase;
+	border: 1px solid var(--gray);
+}
+.main .form label span {
+	margin-bottom: 8px;
+	font-weight: 600;
+	border: 1px solid Transparent;
+}
+::-webkit-input-placeholder{
+		font-size: var(--font-mini);
+		font-weight: 600;
+		color: var(--color-second);
+}
+:-ms-input-placeholder {
+	font-size: var(--font-mini);
+	font-weight: 600;
+	color: var(--color-second);
+}
+::placeholder {
+	font-size: var(--font-mini);
+	font-weight: 600;
+	color: var(--color-second);
+}
+.main .form label[for="buttons"] {
+	display: flex;
+	justify-content: space-between;
+}
+.main .form label button {
+	border-radius: 0;
+	border: none;
+	flex-basis: 48%;
+	font-size: var(--font-normal);
+	font-weight: 600;
+	text-transform: uppercase;
+	background-color: var(--gray);
+	border: 1px solid Transparent;
+	color: var(--white);
+	-webkit-transition: all 280ms ease;
+	-moz-transition: all 280ms ease;
+	transition: all 280ms ease;
+}
+
+.main .form label button:hover {
+	background-color: var(--color-second);
+	border: 1px solid var(--gray);
+}
