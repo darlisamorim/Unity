@@ -103,6 +103,11 @@ define('MAIL_REDIRECT', 'URL_DE_REDIRECIONAMENTO'); // URL de redirecionamento e
 * Note que este arquivo define as configuração do PHPMailer e cada linha contém um comentário. Além disso vou deixar pré-configurado com minhas credenciais ( Excluindo é claro minha senha de e-mail ), certo agora você só precisa substituir as minhas credenciais pelas suas.
 ```
 
+Agora vamos para dentro da pasta ( _source/scripts/**mail.php** ) este também é um arquivo de configuração, porém ele contém toda a informação de script que faz o formulário e por sua vez o envio de e-mail acontecer:
+```
+dsd
+```
+
 Dentro da pasta **raiz/**, temos um arquivo **index.php** afim de simular um formulário criei e formatei alguns campos ( Nome, E-mail, Anexo, Assunto e Mensagem ), porém você poderá adiciona-los ou remove-los seguindo os passos abaixo:
 ```
 * No nosso exemplo vamos adicionar um campo novo chamado ( SOBRENOME ). Dentro do arquivo **index.php** vamos localizar o <label for="name> e vamos copiar e colar ele assim como todo o conteúdo que o compõe. O código deverá ficar assim:
