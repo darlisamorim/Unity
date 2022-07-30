@@ -55,11 +55,12 @@ O Layout foi separado em camadas veja ( Pastas e Arquivos ):
 
   * **/_storage**:
     * [/css]
-      * reset.css
-      * ~~normalize.css~~ **->** ( Desabilitado ( Esteja Reset está desabilitado estou usando o meu próprio ) )
+      * reset.css e normalize.css **->** Inclui o meu RESET.css junto ao do NORMALIZE.css
       * style.css
 
-    * [/js] **->** ( Scripts do projeto (jQuery e Main) )
+    * [/js] **->** Scripts do projeto
+      * jquery.js
+      * main.js
 
   * **raiz/**:
     * .gitignore -> Define quais arquivos não serão adicionados na hora do envio para o repositório
