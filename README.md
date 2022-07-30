@@ -96,12 +96,12 @@ define('MAIL_SENDER', 'Darlis A. Amorim | Unity Form PHPMailer'); // Nome do rem
 define('MAIL_MODE', 'ssl'); // Encriptação de envio ( tls / ssl ). O padrão normal do PHPMailer ( PHPMailer::ENCRYPTION_SMTPS )
 define('MAIL_TESTER', ''); // E-mail de disparo teste
 
+define('MAIL_REDIRECT', 'URL_DE_REDIRECIONAMENTO');
+
 * Note que este arquivo define as configuração do PHPMailer e cada linha contém um comentário. Além disso vou deixar pré-configurado com minhas credenciais ( Excluindo é claro minha senha de e-mail ), agora você só precisa substituir as minhas credenciais pelas suas.
 ```
 
-Algo muito importante para falar é que 
-
-Em nosso exemplo veja como ficará quando você modificar as Tags do site note que pegamos o mesmo trecho do arquivo **seo.php**:
+Dentro da pasta **raiz/**, temos um arquivo **index.php** coloquei nele alguns campos ( Nome, E-mail, Anexo, Assunto e Mensagem ), porém você poderá adicionar ou remove-los seguindo os passos abaixo:
 ```
 * Exemplo:
 
