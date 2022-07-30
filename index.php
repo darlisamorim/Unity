@@ -21,7 +21,6 @@
 
 		<main class="main container__flex">
 			<form name="unity" class="form" action="_source/scripts/mail.php" method="POST" enctype="multipart/form-data">
-			<!-- <form name="unity" class="form" action="" method="POST" enctype="multipart/form-data"> -->
 				<fieldset>
 
 					<legend>

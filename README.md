@@ -39,6 +39,7 @@ Unity é um respositório que tem o objetivo de criar um formulário de disparo 
 Extras:
   * Bibliotecas:
     * [PHPMailer](https://github.com/PHPMailer/PHPMailer)
+    * [NORMALIZE.CSS](https://necolas.github.io/normalize.css/)
 
 
   * Visual Studio Code
@@ -53,9 +54,15 @@ Extras:
 
 O Layout foi separado em camadas veja ( Pastas e Arquivos ):
 
+  * **/_source**:
+    * [/PHPMailer] **->** Contém os arquivos do repositório oficial do PHPMailer
+    * [/scripts] **->** Scripts de configuração de envio
+      * mail.php
+      * settings.php
+
   * **/_storage**:
     * [/css]
-      * reset.css e normalize.css **->** Inclui o meu RESET.css junto ao do NORMALIZE.css
+      * reset.css **->** Inclui o NORMALIZE.css ao meu RESET.CSS
       * style.css
 
     * [/js] **->** Scripts do projeto
@@ -72,25 +79,22 @@ O Layout foi separado em camadas veja ( Pastas e Arquivos ):
 
 ## ➤ Como utilizar ?
 
-Comece deixando um Follow no meu Github e em seguida exclua os seguintes arquivos ( **.gitignore**, **README.md** e **/.git** ) você não precisa destes arquivos a partir disso e so ler com atenção abaixo. </br></br>
-É uma estrutura bem simples basta seguir o padrão colocado por mim ou seja para cada arquivo existe um diretório específico onde ele se encaixará. A princípio quando você estiver refatorando o código irá notar que existem diversas Tags tais como ( **{SITE_TITLE}**, **{SITE_SUBNAME}**, **{GOOGLE_CHECK}**, **{FACEBOOK_ID_PAGE}**, etc ). Elas também foram colocadas como guia, pois servem para dizer exatamente onde você vai colocar determinada informações no site.
+Comece deixando um Follow no meu Github e em seguida exclua os seguintes arquivos e pastas ( **.gitignore**, **README.md** e **/.git** ), pois não são necessários a partir disso basta ler com atenção abaixo. </br></br>
 
-Recortei um trecho do arquivo **seo.php** é assim que ele se encontra atualmente:
+A Primeira coisa que você precisa saber é que além desse README.md, também estou deixando todo o código marcado com comentários dessa forma lendo este conteúdo e vendo o comentário de cada linha você não terá problemas em utilizar dessa estrutura.
+
+Vamos começar do inicio dentro da pasta ( _source/scripts/**settings.php** ) encontraremos o arquivo de configuração de disparo:
 ```
-<meta itemprop="name" content="{SITE_TITLE} | {SITE_SUBNAME}" />
-<meta itemprop="description" content="{SITE_DESCRIPTION}" />
-<meta itemprop="url" content="{SITE_URL}" />
-<meta itemprop="image" content="{SITE_IMAGE_DEFAULT}" />
+define('MAIL_HOST', 'smtp.hostinger.com'); // Servidor de e-mail
+define('MAIL_USER', 'eu@darlisalvesamorim.com'); // E-mail de envio usuário ( SMTP )
+define('MAIL_SMTP', 'eu@darlisalvesamorim.com'); // E-mail de autenticação. Geralmente é igual ao ( MAIL_USER ).
+define('MAIL_PASS', 'SUA_SENHA'); // Senha do e-mail usuário ( SMTP )
+define('MAIL_PORT', '465'); // Porta de envio SSL = 465 / TLS = 587 / SSL & TLS ( POP3S ) = 993
+define('MAIL_SENDER', 'Darlis A. Amorim | Unity Form PHPMailer'); // Nome do remetente de e-mail
+define('MAIL_MODE', 'ssl'); // Encriptação de envio ( tls / ssl ). O padrão normal do PHPMailer ( PHPMailer::ENCRYPTION_SMTPS )
+define('MAIL_TESTER', ''); // E-mail de disparo teste
 
-* Tags:
-
-  * {SITE_TITLE} -> Titulo do site { ProGame }
-  * {SITE_SUBNAME} -> Sub Descrição do site  { O Melhor Site de Games }
-  * {SITE_DESCRIPTION} -> Descrição completa { Você encontra o download de todos os melhores jogos de graça }
-  * {SITE_URL} -> URL do site { https://www.progame.com/ }
-  * {SITE_IMAGE_DEFAULT} -> Imagem de compartilhamento do site { https://www.progame.com/_storage/images/default.svg }
-
-* Note que cada Tag tem um texto auto-explicativo nela acima eu citei algumas existem outras dentro do projeto, porém veja um exemplo pronto abaixo.
+* Note que este arquivo define as configuração do PHPMailer e cada contém um comentário a respeito do que se trata. Além disso vou deixar pré-configurado com minhas credenciais ai você somente precisa substituir pelas suas credenciais corretas. ( Lembrando que você consegue essas configurações com seu provedor de Hospedagem ou E-mail )
 ```
 
 Em nosso exemplo veja como ficará quando você modificar as Tags do site note que pegamos o mesmo trecho do arquivo **seo.php**:
