@@ -33,18 +33,12 @@ Unity é um respositório que tem o objetivo de criar um formulário de disparo 
 - ~~[Javascript](https://javascript.info/) Pending~~
   - Arquivo incluido( main.js )
 - [PHP](https://www.php.net/)
-  - Includes para fatiar o layout
+  - Scripts de disparo e autenticação
 
 
 Extras:
   * Bibliotecas:
-    * [Boxicons](https://boxicons.com/)
-    * [Fontawesome](https://fontawesome.com/)
-    * [Icomoon](https://icomoon.io/)
-    * [Line-Awesome](https://icons8.com/line-awesome)
-    * [~~Iconscout~~ *Pending](https://icons8.com/line-awesome)
-    * [~~NormalizeCSS~~ *Disabled](https://necolas.github.io/normalize.css/)
-    * [AnimateCSS](https://animate.style)
+    * [PHPMailer](https://github.com/PHPMailer/PHPMailer)
 
 
   * Visual Studio Code
@@ -61,37 +55,16 @@ O Layout foi separado em camadas veja ( Pastas e Arquivos ):
 
   * **/_storage**:
     * [/css]
-      * [/components] **->** ( Arquivos de Bibliotecas )
-        * animate.css
-        * boxicons.css
-        * cssoo.css
-        * fontawesome.css
-        * icomoon.css
-        * iconscout.css **->** ( Pendente ( Assim que possível vou coloca-la ) )
-        * line-awesome.css
-        * ~~normalize.css~~ **->** ( Desabilitado ( Esteja Reset está desabilitado estou usando o meu próprio ) )
-        * queries.css
-        * reset.css
-      * [/folds] **->** ( Style de Páginas )
-        * header.css
-        * main.css
-        * footer.css
+      * reset.css
+      * ~~normalize.css~~ **->** ( Desabilitado ( Esteja Reset está desabilitado estou usando o meu próprio ) )
+      * style.css
 
-    * [/fonts] **->** ( Arquivos complementares das bibliotecas ( .eot, svg, ttf etc..) )
-    * [/images] **->** ( Imagens do projeto (Logo, favicon, Default) )
-    * [/js] **->** ( Scripts do projeto (Html5shiv, jQuery e Main) )
-
-  * **/partls**:
-    * [seo.php] **->** Otimizações para os buscadores
-    * [header.php] **->** Arquivo de cabeçalho e definições do site
-    * [footer.php] **->** Rodapé do site
+    * [/js] **->** ( Scripts do projeto (jQuery e Main) )
 
   * **raiz/**:
+    * .gitignore -> Define quais arquivos não serão adicionados na hora do envio para o repositório
     * index.php **->** Responsável pelas sessões ( sections ) do site
     * README.md **->** Arquivo padrão de interpretação do git ou seja este tutorial que está lendo agora
-    * robots.txt **->** Define quais diretórios os buscadores podem ou não ler e interpretar
-    * ~~rss.php~~  **->** Arquivo *Pendente
-    * ~~sitemap.php~~ **->** Arquivo *Pendente
 
 
 [![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)](#file-insomnia)
