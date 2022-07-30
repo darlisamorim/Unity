@@ -1,4 +1,15 @@
 <?php
+echo "
+<head>
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800' rel='stylesheet' type='text/css'>
+
+	<link rel='stylesheet' href='../../_storage/css/reset.css'>
+	<link rel='stylesheet' href='../../_storage/css/style.css'>
+	<link rel='stylesheet' href='../../_storage/css/queries.css'>
+	<link rel='shortcut icon' href='../../_storage/images/favicon.svg'>
+
+</head>";
+
 /*
  * Selecionei meu fuso horário
  * Documentação oficial para buscar o fuso horário -> https://www.php.net/manual/pt_BR/timezones.php
@@ -80,28 +91,44 @@ if (isset($name, $email, $file, $subject, $message)) {
 
 	// Verificação, validação e redirecionamento de e-mail após disparo
 	if ($mail->send()) {
-		echo '<div class="wrapper">
-						<div class="wrapper-box wrapper-block">
-							E-mail enviado com sucesso!
-						</div>
+		echo '<div class="warnings">
+						<span>
+							<b class="success">E-mail enviado com sucesso.</b>
+							<br>
+							<br>
+							Você será redirecionado!
+						</span>
 					</div>' .
 					"<script>
-         		setTimeout(function() {
+				setTimeout(function() {
             	window.location.href = '$redirect';
 	        	}, '$redirectTemp');
     			</script>";
-		// Sem redirecionamento -> ( echo '<div class="wrapper"><div class="wrapper-box wrapper-block">E-mail enviado com sucesso!</div></div>'; )
+
+		// Sem redirecionamento -> (
+		// echo '<div class="warnings">
+		// 		<span>
+		// 			<b class="success">E-mail enviado com sucesso.</b>
+		// 			<br>
+		// 			<br>
+		// 			Você será redirecionado!
+		// 		</span>			
+		// 	</div>';
+		// )
 	} else {
-			echo '<div class="wrapper">
-							<div class="wrapper-box wrapper-block">
-								E-mail não enviado.
-							</div>
-						</div>';
+			echo '<div class="warnings">
+						<span>
+							<b class="error">E-mail não enviado.</b>
+							<br>
+							<br>
+							Tente novamente. Você será redirecionado!
+						</span>	
+					</div>';
 	} // Se houver algum erro basta adicionar o parametro ( {$mail->ErrorInfo} ) dentro do corpo da mensagem.
 } else {
-		echo '<div class="wrapper">
-						<div class="wrapper-box wrapper-block">
-							E-mail não enviado: Informar o Nome e o E-mail
-							</div>
-					</div>';
+		echo '<div class="warnings">
+					<span>
+						E-mail não enviado: Confira suas Informações!
+					</span>
+				</div>';
 }  // Se houver algum erro basta adicionar o parametro ( {$mail->ErrorInfo} ) dentro do corpo da mensagem.

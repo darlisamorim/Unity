@@ -16,15 +16,11 @@
 	--color-first: hsla(var(--color-first-hue), 71%, 41%, var(--color-first-hsla));
 
 	/* Second Main */
-	--color-second-hue: 350;
+	--color-second-hue: 510;
 	--color-second-hsla: 1;
 	--color-second: hsla(var(--color-second-hue), 71%, 28%, var(--color-second-hsla));
 
 	/* Start */
-	--fz: 0em !important;
-	--mz: 0;
-	--pz: 0;
-	--dn: none;
 	--font-name: 'Open Sans', sans-serif;
 
 	/* Convert Size -> ( px ) to ( em ) {N / 16} = Result */
@@ -33,13 +29,10 @@
 	--font-smaller: 1em;	/* 16px */
 	--font-big: 1.75em;		/* 28px */
 
-
 	/* Contents */
 	--container-with: 100%;
 	--content-max-width: 1024px;
-	/* --content-max-width: 1366px; */
 	--content-width: 90%;
-
 }
 
 
@@ -164,4 +157,34 @@ body {
 .main .form label button:hover {
 	background-color: var(--color-second);
 	border: 1px solid var(--gray);
+}
+
+
+/* Avisos */
+.warnings {
+	display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+}
+.warnings span {
+	font-size: var(--font-normal);
+	font-weight: 600;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 28px 40px 20px 40px;
+    border: 1px solid var(--gray-hsla);	
+    background-color: var(--white);
+}
+
+.warnings span b {	
+	margin: 12px 0 12px 0;
+	padding: 6px 12px;
+}
+.warnings span b.success {
+	background-color: var(--color-second);
+}
+.warnings span b.error {
+	background-color: var(--color-first);
 }
