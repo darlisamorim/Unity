@@ -105,7 +105,7 @@ define('MAIL_REDIRECT', 'URL_DE_REDIRECIONAMENTO'); // URL de redirecionamento e
 
 Dentro da pasta **raiz/**, temos um arquivo **index.php** afim de simular um formulário criei e formatei alguns campos ( Nome, E-mail, Anexo, Assunto e Mensagem ), porém você poderá adiciona-los ou remove-los seguindo os passos abaixo:
 ```
-* No nosso exemplo vamos adicionar um campo novo chamado ( SOBRENOME ). Dentro do arquivo **index.php** vamos localizar o <label for="name> e vamos copiar e colar ele assim como todo o conteúdo que o compoe. O código deverá ficar assim:
+* No nosso exemplo vamos adicionar um campo novo chamado ( SOBRENOME ). Dentro do arquivo **index.php** vamos localizar o <label for="name> e vamos copiar e colar ele assim como todo o conteúdo que o compõe. O código deverá ficar assim:
 
   <label for="name">
     <span>Nome:</span>
@@ -123,6 +123,8 @@ Dentro da pasta **raiz/**, temos um arquivo **index.php** afim de simular um for
     <span>Sobrenome:</span>
     <input type="text" name="sobrenome" placeholder="Digite seu Sobrenome!" required>
   </label>
+
+* Em seguida você ira para dentro da pasta 
 
 ```
 Desde de que você tenha atenção irá conseguir modificar e ajustar os arquivos para alimenta-los a partir do refatoramento e assim terá um site ou página otimizado.
