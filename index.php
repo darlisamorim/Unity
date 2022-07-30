@@ -17,63 +17,63 @@
 
 </head>
 
-<body>
+	<body>
 
-			<main class="main container__flex">
-					<!-- <form name="unity" class="form" action="_source/scripts/mail.php" method="POST" enctype="multipart/form-data"> -->
-					<form name="unity" class="form" action="" method="POST" enctype="multipart/form-data">
-						<fieldset>
+		<main class="main container__flex">
+			<form name="unity" class="form" action="_source/scripts/mail.php" method="POST" enctype="multipart/form-data">
+			<!-- <form name="unity" class="form" action="" method="POST" enctype="multipart/form-data"> -->
+				<fieldset>
 
-							<legend>
-								<mark>Unity</mark> Form <b>PHPMailer</b>
-							</legend>
+					<legend>
+						<mark>Unity</mark> Form <b>PHPMailer</b>
+					</legend>
 
-							<!-- required -->
-							<label for="name">
-								<span>Nome:</span>
-								<input type="text" name="name" placeholder="Digite seu nome!" >
-							</label>
+					<!-- required -->
+					<label for="name">
+						<span>Nome:</span>
+						<input type="text" name="name" placeholder="Digite seu nome!" >
+					</label>
 
-							<label for="email">
-								<span>E-mail:</span>
-								<input type="email" name="email" placeholder="Digite seu e-mail!" >
-							</label>
+					<label for="email">
+						<span>E-mail:</span>
+						<input type="email" name="email" placeholder="Digite seu e-mail!" >
+					</label>
 
-							<label for="file">
-								<span>Anexe:</span>
-								<input type="file" accept="image/png, image/jpeg, image/jpg" name="attachment" >
-							</label>
+					<label for="file">
+						<span>Anexe:</span>
+						<input type="file" accept="image/png, image/jpeg, image/jpg" name="attachment" >
+					</label>
 
-							<label for="subject">
-								<span>Assunto:</span>
-								<input type="text" name="subject" placeholder="Sobre o que deseja falar?" >
-							</label>
+					<label for="subject">
+						<span>Assunto:</span>
+						<input type="text" name="subject" placeholder="Sobre o que deseja falar?" >
+					</label>
 
-							<label for="message">
-								<span>Mensagem:</span>
-								<textarea name="message" rows="4" cols="50" placeholder="Digite sua mensagem!" ></textarea>
-							</label>
+					<label for="message">
+						<span>Mensagem:</span>
+						<textarea name="message" rows="4" cols="50" placeholder="Digite sua mensagem!" ></textarea>
+					</label>
 
-							<label for="buttons">
-								<button type="reset" name="reset">Reescrever Mensagem</button>
-								<button type="submit" name="send">Enviar Mensagem</button>
-							</label>
+					<label for="buttons">
+						<button type="reset" name="reset">Reescrever Mensagem</button>
+						<button type="submit" name="send">Enviar Mensagem</button>
+					</label>
 
-							<label for="debug">
-								
-							</label>
+					<!-- <label for="debug">
+						
+					</label> -->
 
-						</fieldset>
-						<!-- Fim Fieldset -->
+				</fieldset>
+				<!-- Fim Fieldset -->
 
-					</form>
-					<!-- FIM FORM -->
-			</main>
-			<!-- Fim Main.container__flex -->
-
+			</form>
+			<!-- FIM FORM -->
+		</main>
+		<!-- Fim Main.container__flex -->
 
 		<!-- All Scripts -->
 		<script src="_storage/js/jquery.js"></script>
 		<script src="_storage/js/main.js"></script>
+		
 	</body>
 </html>

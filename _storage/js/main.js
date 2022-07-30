@@ -1,8 +1,8 @@
 $(document).ready(function(){
 
-    debug   = $('label[for="debug"]');
-    env     = $('form[name="unity"]');
-    action  = 'http://localhost/Unity/_source/scripts/mail.php';
+    // debug   = $('label[for="debug"]');
+    // env     = $('form[name="unity"]');
+    // action  = 'http://localhost/Unity/_source/scripts/mail.php';
 
     // function resp (datas) {
     //   debug.empty().html('<pre>'+datas+'</pre>');
@@ -23,13 +23,13 @@ $(document).ready(function(){
     // }
 
 
-    env.submit(function () {
-      $.post(action, $(this).serialize(),function(resp){
-        alert(resp);
-      });
+    // env.submit(function () {
+    //   $.post(action, $(this).serialize(),function(resp){
+    //     alert(resp);
+    //   });
 
-      return false;
+    //   return false;
 
-    });
+    // });
 
 });

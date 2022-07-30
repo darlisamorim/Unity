@@ -62,17 +62,18 @@ if (isset($name, $email, $file, $subject, $message)) {
 	$mail->Subject = $subject;																						// Assunto do e-mail usando a variavel do formulário ( $subject )
 	$mail->CharSet = 'UTF-8';																							// Unicode padrão ( UTF-8 )
 	$mail->Body = "
-		Olá <b style='text-transform: capitalize;'>{$name}</b>!
-		<br>
-		Muito obrigado pelo contato.
+		Olá <b style='text-transform: capitalize;'>{$name}</b> Tudo bem ? Recebemos sua mensagem: 
 
 		<br><br>
-		Data/Hora: <b>{$date}</b> as <b>{$hour}</b>
+		{$message}
 		<br><br>
-
+		
+		Data / Hora: <b>{$date}</b> / <b>{$hour}</b>
+		<br><br>
+		
 		Atenciosamente:
 		<br>
-		<b>${user}</b>
+		<b>${user}</b>.
 	";																																		// Corpo da mensagem em <b>HTML</b>
 	$mail->AltBody = "Olá {$name}! Muito obrigado pelo contato.";					// Corpo da mensagem em texto simples para correio de e-mail simples sem formatação em HTML';
 

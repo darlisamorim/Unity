@@ -161,7 +161,6 @@ body {
 	-moz-transition: all 280ms ease;
 	transition: all 280ms ease;
 }
-
 .main .form label button:hover {
 	background-color: var(--color-second);
 	border: 1px solid var(--gray);
