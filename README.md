@@ -96,12 +96,14 @@ define('MAIL_SENDER', 'Darlis A. Amorim | Unity Form PHPMailer'); // Nome do rem
 define('MAIL_MODE', 'ssl'); // Encriptação de envio ( tls / ssl ). O padrão normal do PHPMailer ( PHPMailer::ENCRYPTION_SMTPS )
 define('MAIL_TESTER', ''); // E-mail de disparo teste
 
-define('MAIL_REDIRECT', 'URL_DE_REDIRECIONAMENTO');
+define('MAIL_REDIRECT', 'URL_DE_REDIRECIONAMENTO'); // URL de redirecionamento ex: ( https://www.darlisalvesamorim.com )
 
-* Note que este arquivo define as configuração do PHPMailer e cada linha contém um comentário. Além disso vou deixar pré-configurado com minhas credenciais ( Excluindo é claro minha senha de e-mail ), agora você só precisa substituir as minhas credenciais pelas suas.
+Perceba que todas as minhas credenciais estão dentro da segunda camada de aspas simples ex: ( 'MAIL_HOST' 'CREDENCIAIS' ) estou marcando assim, pois é onde serão servidas as informações
+
+* Note que este arquivo define as configuração do PHPMailer e cada linha contém um comentário. Além disso vou deixar pré-configurado com minhas credenciais ( Excluindo é claro minha senha de e-mail ), certo agora você só precisa substituir as minhas credenciais pelas suas.
 ```
 
-Dentro da pasta **raiz/**, temos um arquivo **index.php** coloquei nele alguns campos ( Nome, E-mail, Anexo, Assunto e Mensagem ), porém você poderá adicionar ou remove-los seguindo os passos abaixo:
+Dentro da pasta **raiz/**, temos um arquivo **index.php** afim de simular um formulário criei e formatei alguns campos ( Nome, E-mail, Anexo, Assunto e Mensagem ), porém você poderá adiciona-los ou remove-los seguindo os passos abaixo:
 ```
 * Exemplo:
 
