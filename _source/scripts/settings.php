@@ -14,8 +14,9 @@ define('MAIL_MODE', 'ssl'); // Encriptação de envio ( tls / ssl ). O padrão n
 define('MAIL_TESTER', ''); // E-mail de disparo teste
 
 /*
- * Link de redirecionamento após disparo
+ * Link e Tempo de redirecionamento após disparo
  */
 define('MAIL_REDIRECT', 'URL_DE_REDIRECIONAMENTO'); // URL de redirecionamento ex: ( https://www.darlisalvesamorim.com )
+define('MAIL_REDIRECT_TEMP', '3000'); // Tempo para acontecer o redirecionamento ex: ( 3000 ) = 3 Segundos 
 
 ?>

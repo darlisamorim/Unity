@@ -41,7 +41,7 @@ $hour = date('H:i:s');																										// Define a hora
 $date = date('d/m/Y');																										// Define a data
 $user = MAIL_SENDER;																										// Define o remetente do e-mail ex: Atenciosamente, Darlis A. Amorim
 $redirect = MAIL_REDIRECT;																									// Variavel de redirecionamento
-$redirectTemp = 3000;																										// Tempo de redirecionamento em segundos
+$redirectTemp = MAIL_REDIRECT_TEMP;																										// Tempo de redirecionamento em segundos
 
 // Start do PHPMailer
 $mail = new PHPMailer(true);
@@ -60,7 +60,7 @@ if (isset($name, $email, $file, $subject, $message)) {
 	// Recipients
 	$mail->setFrom('comercial@fugaproanime.click', 'Equipe | Fuga');
 	$mail->addAddress('comercial@fugaproanime.click', 'Equipe | Fuga');														// Adicionar um destinatário
-	$mail->addAddress($email, 'Equipe | Fuga');																				// Nome do destinatário ( Opcional )
+	$mail->addAddress($email, MAIL_SENDER);																				// Nome do destinatário ( Opcional )
 
 	// Attachments
  	$mail->AddAttachment($file['tmp_name'], $file['name']);																	// Parametro de anexo do formulário

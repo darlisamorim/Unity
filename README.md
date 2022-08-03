@@ -81,11 +81,11 @@ O Layout foi separado em camadas veja ( Pastas e Arquivos ):
 
 Comece deixando um Follow no meu Github e em seguida exclua os seguintes arquivos e pastas ( **.gitignore**, **README.md** e **/.git** ), pois não são necessários para o disparo de e-mails leia tudo abaixo com atenção. </br></br>
 
-A Primeira coisa que você precisa saber é que além desse README.md, também estou deixando todo o código marcado com comentários e também lendo deste conteúdo você não terá problemas em utilizar este repositório ( Unity ).
+A Primeira coisa que você precisa saber é que além desse README.md, também estou deixando todo o código marcado com comentários e lendo essse conteúdo você não terá problemas em utilizar este repositório ( Unity ).
 
-Vamos começar do inicio dentro da pasta ( _source/scripts/**settings.php** ) você encontrará o arquivo de configuração:
+Vamos começar do início dentro da pasta ( **_source/scripts/** ) você encontrará o arquivo de configuração ( **settings.php** ):
 ```
-* As configurações desse arquivo irão fazer seus e-mails dispararem com anexo ou não! Lembrando que você consegue essas informações de configurações com seu provedor de **Hospedagem* e/ou **E-mail**.
+* As configurações desse arquivo irão fazer seus e-mails dispararem com anexo ou não! Lembrando que as informações de configurações você consegue com seu provedor de **Hospedagem* e/ou **E-mail**.
 
 define('MAIL_HOST', 'smtp.hostinger.com'); // Servidor de e-mail
 define('MAIL_USER', 'eu@darlisalvesamorim.com'); // E-mail de envio usuário ( SMTP )
@@ -98,14 +98,12 @@ define('MAIL_TESTER', ''); // E-mail de disparo teste
 
 define('MAIL_REDIRECT', 'URL_DE_REDIRECIONAMENTO'); // URL de redirecionamento ex: ( https://www.darlisalvesamorim.com )
 
-* Perceba que todas as minhas credenciais estão dentro da segunda camada de aspas simples ex: ( 'MAIL_HOST' 'CREDENCIAIS' ) estou marcando assim, pois é onde serão servidas as informações.
-
-* Note que este arquivo define as configuração do PHPMailer e cada linha contém um comentário. Além disso vou deixar pré-configurado com minhas credenciais ( Excluindo é claro minha senha de e-mail ), certo agora você só precisa substituir as minhas credenciais pelas suas.
+* Perceba que todas as minhas credenciais já estão dentro da segunda camada de aspas simples ex: ( 'MAIL_HOST' 'CREDENCIAL' ) estou marcando assim, pois é onde serão servidas as informações coletadas pelo seu **Provedor**.
 ```
 
-Agora vamos para dentro da pasta ( _source/scripts/**mail.php** ) este também é um arquivo de configuração, porém ele contém toda a informação de script que faz o formulário e por sua vez o envio de e-mail acontecer:
+Agora vamos para dentro da pasta ( **_source/scripts/** ) também existe um arquivo de configuração ( **mail.php** ), porém ele contém toda a informação de script que faz o formulário funcionar!
 ```
-dsd
+* Vou 
 ```
 
 Dentro da pasta **raiz/**, temos um arquivo **index.php** afim de simular um formulário criei e formatei alguns campos ( Nome, E-mail, Anexo, Assunto e Mensagem ), porém você poderá adiciona-los ou remove-los seguindo os passos abaixo:
