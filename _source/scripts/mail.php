@@ -60,7 +60,11 @@ if (isset($name, $email, $file, $subject, $message)) {
 	// Recipients
 	$mail->setFrom('comercial@fugaproanime.click', 'Equipe | Fuga');
 	$mail->addAddress('comercial@fugaproanime.click', 'Equipe | Fuga');														// Adicionar um destinatário
-	$mail->addAddress($email, MAIL_SENDER);																				// Nome do destinatário ( Opcional )
+	$mail->addAddress($email, 'Equipe | Fuga');																				// Nome do destinatário ( Opcional )
+
+	// $mail->setFrom('comercial@fugaproanime.click', 'Equipe | Fuga');
+	// $mail->addAddress('comercial@fugaproanime.click', 'Equipe | Fuga');														// Adicionar um destinatário
+	// $mail->addAddress($email, 'Equipe | Fuga');	
 
 	// Attachments
  	$mail->AddAttachment($file['tmp_name'], $file['name']);																	// Parametro de anexo do formulário
