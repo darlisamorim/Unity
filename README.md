@@ -104,16 +104,36 @@ define('MAIL_REDIRECT_TEMP', '3000'); // Tempo para acontecer o redirecionamento
 * Mais abaixo vamos ter uma tópico sobre os anexo então leia com atenção tudo!
 ```
 
-Agora vamos para dentro da pasta ( **_source/scripts/** ) também existe um arquivo de configuração ( **mail.php** ) ele contém toda a informação de script que faz o formulário funcionar. Quando você ira mexer nesse arquivo **mail.php** ? 
+Agora vamos para dentro da pasta ( **_source/scripts/** ), existe um arquivo de configuração ( **mail.php** ), ele contém toda a informação que faz o formulário funcionar e quando você ira mexer nesse arquivo **mail.php** ? 
 
   * Para modificar o ( Recipients ), pois em alguns casos seu hospedagem/e-mail precisará do ( Recipients Interiors ) que está comentado.
   * Ao adicionar um input novo ( Novo campo ao formulário ).
   * Para personalizar o conteúdo da mensagem fica dentro da tag  $mail->Body = "Conteúdo"; e $mail->AltBody = "Conteúdo";
   * Quando for utilizar ou não o input ( **file** ) para enviar anexo.
 
-* Uma observação a respeito desse mesmo arquivo ( **mail.php** ). Eu o fiz visando deixar o formulário o mais autosuficiente possível então provavelmente você precisará mexer muito pouco nele e quando precisar mexer você sempre verá um comentário na linha, porém quando não haver comentário de preferência não mexa.
+* Uma observação a respeito desse mesmo arquivo ( **mail.php** ). Eu o fiz visando deixar o formulário o mais autosuficiente possível então provavelmente você precisará mexer muito pouco nele e quando precisar mexer você sempre verá um comentário em cada linha, porém quando não haver comentário de preferência a não mexa.
 
-Dentro da pasta **raiz/**, temos um arquivo **index.php** afim de simular um formulário criei e formatei alguns campos ( Nome, E-mail, Anexo, Assunto e Mensagem ), porém você poderá adiciona-los ou remove-los seguindo os passos abaixo:
+Vamos falar um pouco a respeito do anexo, pois para que ele funcione precisamos deixar habilitado ( Descomentar ) as seguintes linhas nos seguintes arquivos veja abaixo
+```
+* Vá em ( **_source/scripts/** ) abra o arquivo ( **mail.php** ) e descomente as seguintes linhas:
+
+35: $file = isset($_FILES['attachment']) ? $_FILES['attachment'] : 'Não Informado';
+
+73: $mail->AddAttachment($file['tmp_name'], $file['name']);
+
+* Agora abra na /raiz o arquivo ( **index.php** ) e todo o campo **file**:
+
+42: <label for="file">
+43:   <span>Anexe:</span>
+44:   <input type="file" accept="image/png, image/jpeg, image/jpg" name="attachment">
+45: </label>
+
+* Eu fiz o processo com vocês de deixar esse campo de anexo descomentado e funcionando, porém caso o formulário de vocês não necessite de anexo basta seguir os passos ao contrario e comentar novamente essas linhas.
+
+* Caso você deixe alguma linha descomentada é possível que o formulário não envie o anexo ou até mesmo de algum erro para evitar isso faça siga os passos acima e deixe tudo comentado caso não queira o campo de anexo.
+```
+
+
 ```
 * No nosso exemplo vamos adicionar um campo novo chamado ( SOBRENOME ). Dentro do arquivo **index.php** vamos localizar o <label for="name> e vamos copiar e colar ele assim como todo o conteúdo que o compõe. O código deverá ficar assim:
 
