@@ -111,7 +111,7 @@ Agora vamos para dentro da pasta ( **_source/scripts/** ) também existe um arqu
   * Para personalizar o conteúdo da mensagem fica dentro da tag  $mail->Body = "Conteúdo"; e $mail->AltBody = "Conteúdo";
   * Quando for utilizar ou não o input ( file ) para enviar anexo.
 
-* Uma observação a respeito desse mesmo arquivo ( **mail.php** ) eu o fiz visando deixar o formulário o mais auto suficiente possível então provavelmente você precisará mexer muito pouco nele.
+* Uma observação a respeito desse mesmo arquivo ( **mail.php** ). Eu o fiz visando deixar o formulário o mais autosuficiente possível então provavelmente você precisará mexer muito pouco nele e quando precisar mexer você sempre verá um comentário na linha, porém quando não haver comentário de preferência não mexa.
 
 
 ```
