@@ -133,7 +133,7 @@ Vamos falar um pouco a respeito do anexo, pois para que ele funcione precisamos 
 * Caso você deixe alguma linha descomentada é possível que o formulário não envie o anexo ou até mesmo de algum erro para evitar isso faça siga os passos acima e deixe tudo comentado caso não queira o campo de anexo.
 ```
 
-dsds
+Agora para finalizar nós iremos adicionar um novo campo ( input ) e adiciona-lo ao nosso código:
 ```
 * No nosso exemplo vamos adicionar um campo novo chamado ( SOBRENOME ). Dentro do arquivo **index.php** vamos localizar o <label for="name> e vamos copiar e colar ele assim como todo o conteúdo que o compõe. O código deverá ficar assim:
 
