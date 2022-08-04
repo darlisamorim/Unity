@@ -181,14 +181,14 @@ Ao final do script dentro da ( mail.php ) temos a função que faz o disparo do 
 113:	";
 
 * Sem redirecionamento da linha 115 até a 122
-115:  echo '<div class="warnings"> 
-116:    <span>
-117:      <b class="success">E-mail enviado com sucesso.</b>
-118:      <br>
-119:      <br>
-120:      Você será redirecionado! 
-121:    </span>	 
-122:  </div>'; 
+115:  // echo '<div class="warnings"> 
+116:    // <span>
+117:      // <b class="success">E-mail enviado com sucesso.</b>
+118:      // <br>
+119:      // <br>
+120:      // Você será redirecionado! 
+121:    // </span>	 
+122:  // </div>'; 
 
 * Basta descomentar uma e comentar a outra parte e ver o que mais lhe agrada a mim estou deixando com o redirecionamento. Lembrando que a URL assim como o TEMPO de redirecionamento você irá configurar dentro de ( settings.php )
 ```
