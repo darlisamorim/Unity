@@ -151,7 +151,6 @@ Agora para finalizar nós iremos adicionar um novo campo ( input ):
 * Agora vamos pegar essa mesma variável ( $subject ) e adiciona-la ao nosso IF na linha 51 ficará assim:
 
 De:
-
 51: if (isset($name, $email, $file, $message)) {
 
 Para: 
