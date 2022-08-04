@@ -142,16 +142,56 @@ Agora para finalizar nós iremos adicionar um novo campo ( input ):
 49:   <input type="text" name="subject" placeholder="Sobre o que deseja falar?">
 50: </label>
 
-* Joia agora que adicionamos esse conteúdo dentro do arquivo ( index.php ) temos que fazer algumas configurações no arquivo ( _source/scripts/mail.php ). 
+* Joia agora que adicionamos esse conteúdo dentro do arquivo ( index.php ) temos que fazer algumas uma configuração no arquivo ( mail.php ) ele esta dentro de ( _source/scripts/mail.php ). 
 
-* Primeiro vamos adicionar uma validação e pegar o campo pelo atribudo ( name ) 
+* Primeiro vamos adicionar uma validação e pegar o campo pelo atribudo ( name ) então vamos criar uma variável ( $subject ) e essa verificação também na linha 36:
 
 36: $subject = isset($_POST['subject']) ? $_POST['subject'] : 'Não Informado';
 
-* E também dentro da 
+* Agora vamos pegar essa mesma variável ( $subject ) e adiciona-la ao nosso IF na linha 51 ficará assim:
+
+De:
+
+51: if (isset($name, $email, $file, $message)) {
+
+Para: 
+51: if (isset($name, $email, $file, $subject, $message)) {
 
 ```
-Desde de que você tenha atenção irá conseguir modificar e ajustar os arquivos para alimenta-los a partir do refatoramento e assim terá um site ou página otimizado.
+Agora você também já sabe adicionar um novo campo ao seu formulário caso queira remover esse mesmo campo basta fazer o processo ao contrario.
+
+Ao final do script dentro da ( mail.php ) temos a função que faz o disparo do formulário e dentro dela temos algo interessante a partir da linha 99 até a 113. Eu criei um alerta com redirecionamento, porém caso você não queira esse redirecionamento basta usar o código comentado um pouco abaixo veja na prática:
+
+```
+* Original com redirecionamento da linha 99 até a 113
+99:   echo '
+100:    <div class="warnings">
+101:      <span>
+102:        <b class="success">E-mail enviado com sucesso.</b>
+103:				<br>
+104:				<br>
+105:				Você será redirecionado!
+106:		  </span>
+107:		</div>' .
+108:		"<script>
+109:		  setTimeout(function() {
+110:			  window.location.href = '$redirect';
+111:			}, '$redirectTemp');
+112:		</script>
+113:	";
+
+* Sem redirecionamento da linha 115 até a 122
+115:  echo '<div class="warnings"> 
+116:    <span>
+117:      <b class="success">E-mail enviado com sucesso.</b>
+118:      <br>
+119:      <br>
+120:      Você será redirecionado! 
+121:    </span>	 
+122:  </div>'; 
+
+* Basta descomentar uma e comentar a outra parte e ver o que mais lhe agrada a mim estou deixando com o redirecionamento. Lembrando que a URL assim como o TEMPO de redirecionamento você irá configurar dentro de ( settings.php )
+```
 
 [![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)](#file-insomnia)
 

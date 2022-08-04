@@ -96,21 +96,22 @@ if (isset($name, $email, $file, $subject, $message)) {
 
 	// Verificação, disparo e redirecionamento de e-mail
 	if ($mail->send()) {
-		echo '<div class="warnings">
-					<span>
-						<b class="success">E-mail enviado com sucesso.</b>
-						<br>
-						<br>
-						Você será redirecionado!
-					</span>
-				</div>' .
-				"<script>
-					setTimeout(function() {
-            		window.location.href = '$redirect';
-	        		}, '$redirectTemp');
-    			</script>
+		echo '
+			<div class="warnings">
+				<span>
+					<b class="success">E-mail enviado com sucesso.</b>
+					<br>
+					<br>
+					Você será redirecionado!
+				</span>
+			</div>' .
+			"<script>
+				setTimeout(function() {
+				window.location.href = '$redirect';
+				}, '$redirectTemp');
+			</script>
 		";
-		// Sem redirecionamento -> (
+		// Sem redirecionamento
 		// echo '<div class="warnings">
 		// 		<span>
 		// 			<b class="success">E-mail enviado com sucesso.</b>
@@ -118,8 +119,7 @@ if (isset($name, $email, $file, $subject, $message)) {
 		// 			<br>
 		// 			Você será redirecionado!
 		// 		</span>			
-		// 	</div>';
-		// )
+		// 	</div>';		
 	} else {
 			echo '<div class="warnings">
 						<span>
