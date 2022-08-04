@@ -81,7 +81,7 @@ O Layout foi separado em camadas veja ( Pastas e Arquivos ):
 
 Comece deixando um Follow no meu Github e em seguida exclua os seguintes arquivos e pastas ( **.gitignore**, **README.md** e **/.git** ), pois não são necessários para o disparo de e-mails leia tudo abaixo com atenção. </br></br>
 
-A Primeira coisa que você precisa saber é que além desse README.md, também estou deixando todo o código marcado com comentários e mais esse conteúdo você não terá problemas em utilizar este repositório ( Unity ).
+A Primeira coisa que você precisa saber é que além desse README.md, também estou deixando todo o código marcado com comentários e com mais esse conteúdo você não terá problemas em utilizar este repositório ( Unity ).
 
 Vamos começar do início dentro da pasta ( **_source/scripts/** ) você encontrará o arquivo de configuração ( **settings.php** ):
 ```
@@ -97,10 +97,11 @@ define('MAIL_MODE', 'ssl'); // Encriptação de envio ( tls / ssl ). O padrão n
 define('MAIL_TESTER', ''); // E-mail de disparo teste
 
 define('MAIL_REDIRECT', 'URL_DE_REDIRECIONAMENTO'); // URL de redirecionamento ex: ( https://www.darlisalvesamorim.com )
+define('MAIL_REDIRECT_TEMP', '3000'); // Tempo para acontecer o redirecionamento ex: ( 3000 ) = 3 Segundos 
 
-* Perceba que todas as minhas credenciais já estão dentro da segunda camada de aspas simples ex: ( 'MAIL_HOST' 'CREDENCIAL' ) estou deixando assim, pois é onde serão servidas por você.
+* Perceba que todas as minhas credenciais já estão dentro da segunda camada de aspas simples ex: ( 'MAIL_HOST' 'CREDENCIAL' ) estou deixando assim, pois é onde você servirá suas credenciais.
 
-* Mais abaixo vamos ter uma aba falando da parte do anexo então leia com atenção tudo!
+* Mais abaixo vamos ter uma tópico sobre os anexo então leia com atenção tudo!
 ```
 
 Agora vamos para dentro da pasta ( **_source/scripts/** ) também existe um arquivo de configuração ( **mail.php** ) ele contém toda a informação de script que faz o formulário funcionar. Quando você ira mexer nesse arquivo **mail.php** ? 
@@ -108,7 +109,7 @@ Agora vamos para dentro da pasta ( **_source/scripts/** ) também existe um arqu
   * Para modificar o ( Recipients ), pois em alguns casos seu hospedagem/e-mail precisará do ( Recipients Interiors ) que está comentado.
   * Ao adicionar um input novo ( Novo campo ao formulário ).
   * Para personalizar o conteúdo da mensagem fica dentro da tag  $mail->Body = "Conteúdo"; e $mail->AltBody = "Conteúdo";
-  * Quando for utilizar ou não o input ( file ) para enviar anexo.
+  * Quando for utilizar ou não o input ( **file** ) para enviar anexo.
 
 * Uma observação a respeito desse mesmo arquivo ( **mail.php** ). Eu o fiz visando deixar o formulário o mais autosuficiente possível então provavelmente você precisará mexer muito pouco nele e quando precisar mexer você sempre verá um comentário na linha, porém quando não haver comentário de preferência não mexa.
 
