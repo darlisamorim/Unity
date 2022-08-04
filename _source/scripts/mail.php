@@ -39,7 +39,8 @@ $message = isset($_POST['message']) ? $_POST['message'] : 'Não Informado';
 // Variaveis para facilitar
 $hour = date('H:i:s');																										// Define a hora
 $date = date('d/m/Y');																										// Define a data
-$user = MAIL_SENDER;																										// Define o remetente do e-mail ex: Atenciosamente, Darlis A. Amorim
+$user = MAIL_SENDER;
+$mails = MAIL_USER;																										// Define o remetente do e-mail ex: Atenciosamente, Darlis A. Amorim
 $redirect = MAIL_REDIRECT;																									// Variavel de redirecionamento
 $redirectTemp = MAIL_REDIRECT_TEMP;																										// Tempo de redirecionamento em segundos
 
@@ -48,6 +49,7 @@ $mail = new PHPMailer(true);
 
 // Server Settings
 if (isset($name, $email, $file, $subject, $message)) {
+
 	// $mail->SMTPDebug = SMTP::DEBUG_SERVER;		 																		// Debug de envio ( PHPMailer )
 	$mail->isSMTP();														 												// Método de envio ( SMTP )
 	$mail->Host = MAIL_HOST;																								// Servidor de e-mail
@@ -58,20 +60,21 @@ if (isset($name, $email, $file, $subject, $message)) {
 	$mail->SMTPSecure = MAIL_MODE;							 																// Encriptação de envio ( tls / ssl ). O padrão normal do PHPMailer ( PHPMailer::ENCRYPTION_SMTPS )
 
 	// Recipients
-	$mail->setFrom('comercial@fugaproanime.click', 'Equipe | Fuga');
-	$mail->addAddress('comercial@fugaproanime.click', 'Equipe | Fuga');														// Adicionar um destinatário
-	$mail->addAddress($email, 'Equipe | Fuga');																				// Nome do destinatário ( Opcional )
+	$mail->setFrom($mails, $user);
+	$mail->addAddress($mails, $user);																					// Adicionar um destinatário
+	$mail->addAddress($email, $user);																					// Nome do destinatário ( Opcional )
 
-	// $mail->setFrom('comercial@fugaproanime.click', 'Equipe | Fuga');
-	// $mail->addAddress('comercial@fugaproanime.click', 'Equipe | Fuga');														// Adicionar um destinatário
-	// $mail->addAddress($email, 'Equipe | Fuga');	
+	// Recipients Interiors 
+	// $mail->setFrom('eu@darlisalvesamorim.com', 'Darlis A. Amorim | Unity Form PHPMailer');
+	// $mail->addAddress('eu@darlisalvesamorim.com', 'Darlis A. Amorim | Unity Form PHPMailer');								// Adicionar um destinatário
+	// $mail->addAddress($email, 'Darlis A. Amorim | Unity Form PHPMailer');													// Nome do destinatário ( Opcional )
 
 	// Attachments
  	$mail->AddAttachment($file['tmp_name'], $file['name']);																	// Parametro de anexo do formulário
 
 	// Content
 	$mail->isHTML(true);																									// Define o formato do e-mail para HTML
-	// $mail->Subject = 'Equipe | Fuga';																					// Assunto do e-mail
+	// $mail->Subject = 'Darlis A. Amorim | Unity Form PHPMailer';															// Assunto do e-mail
 	$mail->Subject = $subject;																								// Assunto do e-mail usando a variavel do formulário ( $subject )
 	$mail->CharSet = 'UTF-8';																								// Unicode padrão ( UTF-8 )
 	$mail->Body = "
@@ -81,7 +84,7 @@ if (isset($name, $email, $file, $subject, $message)) {
 		{$message}
 		<br><br>
 		
-		Data / Hora: <b>{$date}</b> / <b>{$hour}</b>
+		Data/Hora: <b>{$date}</b> / <b>{$hour}</b>
 		<br><br>
 		
 		Atenciosamente:

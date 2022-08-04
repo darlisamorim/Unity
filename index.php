@@ -12,8 +12,6 @@
 
 	<link rel="stylesheet" href="_storage/css/reset.css">
 	<link rel="stylesheet" href="_storage/css/style.css">
-	<link rel="stylesheet" href="_storage/css/queries.css">
-	<link rel="shortcut icon" href="_storage/images/favicon.svg">
 
 </head>
 

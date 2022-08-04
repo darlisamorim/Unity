@@ -81,7 +81,7 @@ O Layout foi separado em camadas veja ( Pastas e Arquivos ):
 
 Comece deixando um Follow no meu Github e em seguida exclua os seguintes arquivos e pastas ( **.gitignore**, **README.md** e **/.git** ), pois não são necessários para o disparo de e-mails leia tudo abaixo com atenção. </br></br>
 
-A Primeira coisa que você precisa saber é que além desse README.md, também estou deixando todo o código marcado com comentários e lendo essse conteúdo você não terá problemas em utilizar este repositório ( Unity ).
+A Primeira coisa que você precisa saber é que além desse README.md, também estou deixando todo o código marcado com comentários e mais esse conteúdo você não terá problemas em utilizar este repositório ( Unity ).
 
 Vamos começar do início dentro da pasta ( **_source/scripts/** ) você encontrará o arquivo de configuração ( **settings.php** ):
 ```
@@ -98,12 +98,22 @@ define('MAIL_TESTER', ''); // E-mail de disparo teste
 
 define('MAIL_REDIRECT', 'URL_DE_REDIRECIONAMENTO'); // URL de redirecionamento ex: ( https://www.darlisalvesamorim.com )
 
-* Perceba que todas as minhas credenciais já estão dentro da segunda camada de aspas simples ex: ( 'MAIL_HOST' 'CREDENCIAL' ) estou marcando assim, pois é onde serão servidas as informações coletadas pelo seu **Provedor**.
+* Perceba que todas as minhas credenciais já estão dentro da segunda camada de aspas simples ex: ( 'MAIL_HOST' 'CREDENCIAL' ) estou deixando assim, pois é onde serão servidas por você.
+
+* Mais abaixo vamos ter uma aba falando da parte do anexo então leia com atenção tudo!
 ```
 
 Agora vamos para dentro da pasta ( **_source/scripts/** ) também existe um arquivo de configuração ( **mail.php** ), porém ele contém toda a informação de script que faz o formulário funcionar!
 ```
-* Vou 
+* Quando você ira mexer nesse arquivo **mail.php** ? 
+  * Para modificar o ( Recipients ), pois em alguns casos seu hospedagem/e-mail precisará do ( Recipients Interiors ) que está comentado.
+  * Ao adicionar um input novo ( Novo campo ao formulário ).
+  * Para personalizar o conteúdo da mensagem fica dentro da tag  $mail->Body = "Conteúdo"; e $mail->AltBody = "Conteúdo";
+  * Quando for utilizar ou não o input ( file ) para enviar anexo.
+
+* Uma observação a respeito desse mesmo arquivo ( **mail.php** ) eu o fiz visando deixar o formulário o mais auto suficiente possível então provavelmente você precisará mexer muito pouco nele.
+
+
 ```
 
 Dentro da pasta **raiz/**, temos um arquivo **index.php** afim de simular um formulário criei e formatei alguns campos ( Nome, E-mail, Anexo, Assunto e Mensagem ), porém você poderá adiciona-los ou remove-los seguindo os passos abaixo:
