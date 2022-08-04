@@ -104,7 +104,7 @@ define('MAIL_REDIRECT', 'URL_DE_REDIRECIONAMENTO'); // URL de redirecionamento e
 ```
 
 Agora vamos para dentro da pasta ( **_source/scripts/** ) também existe um arquivo de configuração ( **mail.php** ), porém ele contém toda a informação de script que faz o formulário funcionar!
-```
+
 * Quando você ira mexer nesse arquivo **mail.php** ? 
   * Para modificar o ( Recipients ), pois em alguns casos seu hospedagem/e-mail precisará do ( Recipients Interiors ) que está comentado.
   * Ao adicionar um input novo ( Novo campo ao formulário ).
@@ -112,9 +112,6 @@ Agora vamos para dentro da pasta ( **_source/scripts/** ) também existe um arqu
   * Quando for utilizar ou não o input ( file ) para enviar anexo.
 
 * Uma observação a respeito desse mesmo arquivo ( **mail.php** ). Eu o fiz visando deixar o formulário o mais autosuficiente possível então provavelmente você precisará mexer muito pouco nele e quando precisar mexer você sempre verá um comentário na linha, porém quando não haver comentário de preferência não mexa.
-
-
-```
 
 Dentro da pasta **raiz/**, temos um arquivo **index.php** afim de simular um formulário criei e formatei alguns campos ( Nome, E-mail, Anexo, Assunto e Mensagem ), porém você poderá adiciona-los ou remove-los seguindo os passos abaixo:
 ```
