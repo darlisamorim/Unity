@@ -60,14 +60,14 @@ if (isset($name, $email, $file, $subject, $message)) {
 	$mail->SMTPSecure = MAIL_MODE;							 																// Encriptação de envio ( tls / ssl ). O padrão normal do PHPMailer ( PHPMailer::ENCRYPTION_SMTPS )
 
 	// Recipients
-	$mail->setFrom($mails, $user);
-	$mail->addAddress($mails, $user);																					// Adicionar um destinatário
-	$mail->addAddress($email, $user);																					// Nome do destinatário ( Opcional )
+	$mail->setFrom($mails, $user);																							// O setFrom em algumas situações precisará ser igual ao e-mail User/SMTP da hospedagem
+	$mail->addAddress($mails, $user);																						// Adicionar um destinatário
+	$mail->addAddress($email, $user);																						// Nome do destinatário ( Opcional )
 
 	// Recipients Interiors 
-	// $mail->setFrom('eu@darlisalvesamorim.com', 'Darlis A. Amorim | Unity Form PHPMailer');
-	// $mail->addAddress('eu@darlisalvesamorim.com', 'Darlis A. Amorim | Unity Form PHPMailer');								// Adicionar um destinatário
-	// $mail->addAddress($email, 'Darlis A. Amorim | Unity Form PHPMailer');													// Nome do destinatário ( Opcional )
+	// $mail->setFrom('eu@darlisalvesamorim.com', 'Darlis A. Amorim | Unity Form PHPMailer');								// O setFrom em algumas situações precisará ser igual ao e-mail User/SMTP da hospedagem
+	// $mail->addAddress('eu@darlisalvesamorim.com', 'Darlis A. Amorim | Unity Form PHPMailer');							// Adicionar um destinatário
+	// $mail->addAddress($email, 'Darlis A. Amorim | Unity Form PHPMailer');												// Nome do destinatário ( Opcional )
 
 	// Attachments
  	$mail->AddAttachment($file['tmp_name'], $file['name']);																	// Parametro de anexo do formulário

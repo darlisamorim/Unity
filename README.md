@@ -103,7 +103,7 @@ define('MAIL_REDIRECT', 'URL_DE_REDIRECIONAMENTO'); // URL de redirecionamento e
 * Mais abaixo vamos ter uma aba falando da parte do anexo então leia com atenção tudo!
 ```
 
-Agora vamos para dentro da pasta ( **_source/scripts/** ) também existe um arquivo de configuração ( **mail.php** ), porém ele contém toda a informação de script que faz o formulário funcionar. Quando você ira mexer nesse arquivo **mail.php** ? 
+Agora vamos para dentro da pasta ( **_source/scripts/** ) também existe um arquivo de configuração ( **mail.php** ) ele contém toda a informação de script que faz o formulário funcionar. Quando você ira mexer nesse arquivo **mail.php** ? 
 
   * Para modificar o ( Recipients ), pois em alguns casos seu hospedagem/e-mail precisará do ( Recipients Interiors ) que está comentado.
   * Ao adicionar um input novo ( Novo campo ao formulário ).
