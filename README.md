@@ -113,7 +113,7 @@ Agora vamos para dentro da pasta ( **_source/scripts/** ), existe um arquivo de 
 
 * Uma observação a respeito desse mesmo arquivo ( **mail.php** ). Eu o fiz visando deixar o formulário o mais autosuficiente possível então provavelmente você precisará mexer muito pouco nele e quando precisar mexer você sempre verá um comentário em cada linha, porém quando não haver comentário de preferência a não mexa.
 
-Vamos falar um pouco a respeito do anexo, pois para que ele funcione precisamos deixar habilitado ( Descomentar ) as seguintes linhas nos seguintes arquivos veja abaixo
+Vamos falar um pouco a respeito do anexo, pois para que ele funcione precisamos deixar habilitado ( Descomentar ) as seguintes linhas nos seguintes arquivos veja abaixo:
 ```
 * Vá em ( _source/scripts/ ) abra o arquivo ( mail.php ) e descomente as seguintes linhas:
 
@@ -133,28 +133,22 @@ Vamos falar um pouco a respeito do anexo, pois para que ele funcione precisamos 
 * Caso você deixe alguma linha descomentada é possível que o formulário não envie o anexo ou até mesmo de algum erro para evitar isso faça siga os passos acima e deixe tudo comentado caso não queira o campo de anexo.
 ```
 
-Agora para finalizar nós iremos adicionar um novo campo ( input ) e adiciona-lo ao nosso código:
+Agora para finalizar nós iremos adicionar um novo campo ( input ):
 ```
-* No nosso exemplo vamos adicionar um campo novo chamado ( SOBRENOME ). Dentro do arquivo **index.php** vamos localizar o <label for="name> e vamos copiar e colar ele assim como todo o conteúdo que o compõe. O código deverá ficar assim:
+* Abra na /raiz o arquivo ( index.php ) o campo adicionar que vamos colocar é o ( subject ) ou seja o assunto do nosso formulário então ficará assim abaixo do campo ( file ) nas linhas
 
-  <label for="name">
-    <span>Nome:</span>
-    <input type="text" name="name" placeholder="Digite seu nome!" required>
-  </label>
-  
-  <label for="name">
-    <span>Nome:</span>
-    <input type="text" name="name" placeholder="Digite seu nome!" required>
-  </label>
+47: <label for="subject">
+48:   <span>Assunto:</span>
+49:   <input type="text" name="subject" placeholder="Sobre o que deseja falar?">
+50: </label>
 
-* Agora que você já colou o <label for="name> basta substituir os valores e deixar o seu como no exemplo abaixo:
+* Joia agora que adicionamos esse conteúdo dentro do arquivo ( index.php ) temos que fazer algumas configurações no arquivo ( _source/scripts/mail.php ). 
 
-  <label for="sobrenome">
-    <span>Sobrenome:</span>
-    <input type="text" name="sobrenome" placeholder="Digite seu Sobrenome!" required>
-  </label>
+* Primeiro vamos adicionar uma validação e pegar o campo pelo atribudo ( name ) 
 
-* Em seguida você ira para dentro da pasta 
+36: $subject = isset($_POST['subject']) ? $_POST['subject'] : 'Não Informado';
+
+* E também dentro da 
 
 ```
 Desde de que você tenha atenção irá conseguir modificar e ajustar os arquivos para alimenta-los a partir do refatoramento e assim terá um site ou página otimizado.
