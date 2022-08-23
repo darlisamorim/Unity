@@ -1,6 +1,9 @@
 # My Defaults
 _files
 _storage/images/psd
+.env
+.env.test
+.env.production
 
 # Created by https://www.toptal.com/developers/gitignore/api/linux,macos,windows,nette,composer,phpstorm,visualstudiocode,dreamweaver,sublimetext
 # Edit at https://www.toptal.com/developers/gitignore?templates=linux,macos,windows,nette,composer,phpstorm,visualstudiocode,dreamweaver,sublimetext
@@ -48,7 +51,8 @@ dw_php_codehinting.config
 _MACOSX
 
 # Icon must end with two \r
-Icon
+Icon
+
 
 # Thumbnails
 ._*
